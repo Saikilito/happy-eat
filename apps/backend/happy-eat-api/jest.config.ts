@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'hello',
-  preset: '../../jest.preset.js',
+  displayName: 'backend-happy-eat-api',
+  preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -12,5 +12,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/hello',
+  coverageDirectory: '../../../coverage/apps/backend/happy-eat-api',
 };
