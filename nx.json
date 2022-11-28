@@ -20,6 +20,9 @@
     },
     "lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
     }
   },
   "namedInputs": {
@@ -31,7 +34,22 @@
       "!{projectRoot}/jest.config.[jt]s",
       "!{projectRoot}/.eslintrc.json"
     ],
-    "sharedGlobals": []
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },
-  "defaultProject": "backend-happy-eat-api"
+  "defaultProject": "backend-happy-eat-api",
+  "cli": {
+    "defaultCollection": "@nrwl/gatsby"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/gatsby": {
+      "application": {
+        "style": "styled-components"
+      }
+    }
+  }
 }
